@@ -1,5 +1,6 @@
 # bsef17a548_hafiz_muhammad_usman_khan_ead_03
 
+DOCUMENTATION :
 The project titled Library Management System is Library management software for monitoring and controlling the transactions in a library.
 The project “Library Management System” is developed in cs, which mainly focuses on basic operations in a library like adding new books,
 deleting books, and updating new information, searching books. 

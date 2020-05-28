@@ -1,0 +1,39 @@
+﻿@model List<System.String>
+
+@{
+    ViewBag.Title = "displayBooks";
+    Layout = "~/Views/shared/_layout.cshtml";
+}
+
+<html>
+<head>
+    <title>Books</title>
+</head>
+
+<body>
+    <center>
+    <h2>Select Book Category:
+    <form align="center" id="CategorySlector1" action="/Home/displayBooks1">
+        <select name="bookCategory1">
+            <option value="">Select</option>
+            @foreach (var a in Model)
+            {
+                <option value="@a">@a</option>
+            }
+        </select>
+        <center><a href="#" class="button" onclick="document.getElementById('CategorySlector1').submit()">Search </a></center>
+        </form>
+        </h2>
+        </center>
+
+        <div id="d1"> </div>
+
+        <script>
+            $('#CategorySlector1').change(function () {
+                var value = $('#CategorySlector1').val();
+                // value = encodeURIComponent(value);
+                $('#d1').load('/Home/Category1?cat=' + value);
+            });
+        </script>
+</body>
+</html>

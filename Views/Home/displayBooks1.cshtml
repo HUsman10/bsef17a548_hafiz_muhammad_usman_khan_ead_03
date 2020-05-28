@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MvcApplication_Assignment3.Models.book>
+
+
+    @{
+        ViewBag.Title = "displayBooks";
+        Layout = "~/Views/shared/_layout.cshtml";
+    }
+
+<center><h3>List of Books</h3></center><hr>
+<table align="center" border="2">
+    <td>Book ID</td>
+    <td>Book Name</td>
+    <td><center>AUTHOR</center></td>
+    <td>Edition</td>
+    <td>Category</td>
+    <td>Edit</td>
+    <td>Delete</td>
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td>@b.Id</td>
+            <td>@b.bookName</td>
+            <td>@b.bookAuthor</td>
+            <td>@b.bookEdition</td>
+            <td>@b.bookCategory</td>
+            <td><a href="/Home/editBook/@b.Id"> Edit  </a></td>
+            <td><a href="/Home/deleteBook_DB/@b.Id"> Delete </a></td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,37 @@
+﻿@{
+    Layout = "~/Views/shared/_layout.cshtml";
+}
+
+<form align="center" id="BookForm" method="get" action="/Home/addBook_DB">
+
+    <center><h3>AddBook-Form</h3></center>
+    <fieldset>
+        <center><legend>Please fill in this form to add-book.</legend></center>
+
+        <table align="center" border="2">
+
+            <tr>
+                <td>BookName</td>
+                <td><input type="text" name="bookname" required><br></td>
+            </tr>
+
+            <tr>
+                <td>Author</td>
+                <td><input type="text" name="author" required><br></td>
+            </tr>
+            <tr>
+                <td>Edition</td>
+                <td><input type="text" name="edition" required><br></td>
+            </tr>
+            <tr>
+                <td>Category</td>
+                <td><input type="text" name="bookCategory" required><br></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2"><center><a href="#" class="button" onclick="document.getElementById('BookForm').submit()"><span><span>Add </span></span></a></center><br></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
